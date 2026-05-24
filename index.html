@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane.Jen.Jap · Media Kit 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --gold:#C9A84C;--gold-light:#E8D5A3;--gold-dim:rgba(201,168,76,0.25);
+            --black:#080808;--dark1:#111111;--dark2:#181818;--cream:#F5F0E8;--muted:#888
+        }
+        html{scroll-behavior:smooth}
+        body{background:var(--black);color:var(--cream);font-family:'Raleway',sans-serif;line-height:1.7;overflow-x:hidden}
+
+        .hero{min-height:85vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:50px 20px 44px;background:radial-gradient(ellipse 80% 55% at 50% 40%,rgba(201,168,76,.08) 0%,transparent 70%),var(--black);position:relative}
+        .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+        .logo-wrap{width:88px;height:88px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;margin-bottom:14px;overflow:hidden;box-shadow:0 0 40px rgba(201,168,76,.14)}
+        .logo-wrap img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+        .hero-eyebrow{font-size:8px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);opacity:.8;margin-bottom:8px}
+        .hero-name{font-family:'Playfair Display',serif;font-size:clamp(32px,9vw,74px);font-weight:900;letter-spacing:4px;color:var(--cream);line-height:1;margin-bottom:8px}
+        .hero-name em{color:var(--gold);font-style:normal}
+        .hero-handle{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+        .gold-bar{width:40px;height:1px;background:var(--gold);opacity:.6;margin:0 auto 18px}
+        .hero-tagline{font-family:'Playfair Display',serif;font-size:clamp(14px,3.5vw,21px);font-weight:700;line-height:1.6;margin-bottom:11px;max-width:440px}
+        .hero-tagline em{color:var(--gold);font-style:italic}
+        .hero-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+        .kit-badge{margin-top:20px;border:1px solid var(--gold-dim);border-radius:30px;padding:5px 16px;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+
+        .stats-bg{background:linear-gradient(180deg,var(--dark1) 0%,#14110a 100%);border-top:1px solid var(--gold-dim);border-bottom:1px solid var(--gold-dim)}
+        .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--gold-dim);max-width:680px;margin:0 auto}
+        .stat-box{background:var(--dark1);padding:22px 12px;text-align:center}
+        .s-tag{display:inline-block;font-size:7px;letter-spacing:2px;text-transform:uppercase;padding:2px 7px;border-radius:20px;margin-bottom:5px}
+        .s-tag.gf{color:var(--black);background:var(--gold)}
+        .s-tag.go{color:var(--gold);border:1px solid var(--gold)}
+        .stat-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,6.5vw,44px);letter-spacing:3px;line-height:1;margin-bottom:4px;background:linear-gradient(to bottom,#FFFFFF 0%,#F5C842 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .stat-num sup{font-size:55%;vertical-align:super}
+        .stat-lbl{font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+        .stat-note{font-size:9px;color:var(--gold);opacity:.7;line-height:1.5}
+
+        .wrap{max-width:680px;margin:0 auto;padding:38px 18px}
+        .eyebrow{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:6px}
+        .s-title{font-family:'Playfair Display',serif;font-size:clamp(20px,5vw,30px);text-align:center;color:var(--cream);margin-bottom:24px}
+        .s-title span{color:var(--gold)}
+
+        .aud-grid{display:flex;flex-direction:column;gap:11px}
+        .aud-card{background:var(--dark2);border:1px solid rgba(201,168,76,.15);padding:18px 16px;position:relative}
+        .aud-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+        .aud-ttl{font-size:8px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+        .g-row{display:flex;gap:12px;justify-content:center}
+        .g-item{text-align:center}
+        .g-ring{width:66px;height:66px;border-radius:50%;margin:0 auto 7px;display:flex;align-items:center;justify-content:center}
+        .g-ring.f{background:conic-gradient(var(--gold) 0% 58.7%,rgba(255,255,255,.07) 58.7%)}
+        .g-ring.m{background:conic-gradient(rgba(201,168,76,.5) 0% 41.3%,rgba(255,255,255,.07) 41.3%)}
+        .g-inner{width:48px;height:48px;border-radius:50%;background:var(--dark2);display:flex;flex-direction:column;align-items:center;justify-content:center}
+        .g-pct{font-size:12px;font-weight:700;color:var(--gold);line-height:1}
+        .g-lbl{font-size:11px;color:var(--cream)}
+        .bar-row{margin-bottom:8px}
+        .bar-top{display:flex;justify-content:space-between;font-size:11px;color:var(--cream);margin-bottom:4px}
+        .bar-top b{color:var(--gold);font-weight:600}
+        .bar-track{height:2px;background:rgba(255,255,255,.07);border-radius:2px}
+        .bar-fill{height:100%;background:linear-gradient(90deg,#a07830,var(--gold));border-radius:2px}
+        .bar-note{font-size:9px;color:var(--gold);margin-top:8px;opacity:.85}
+
+        /* ── CAROUSEL ── */
+        .collab-bg{background:var(--dark1);border-top:1px solid var(--gold-dim);border-bottom:1px solid var(--gold-dim)}
+        .carousel-wrap{position:relative;overflow:hidden;touch-action:pan-y}
+        .carousel-track{display:flex;transition:transform .35s cubic-bezier(.4,0,.2,1);will-change:transform}
+        .carousel-slide{flex:0 0 100%;min-width:0}
+
+        .carousel-nav{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:16px}
+        .c-btn{display:flex;align-items:center;gap:6px;padding:10px 20px;border-radius:30px;border:1.5px solid var(--gold);background:var(--dark2);color:var(--gold);font-family:'Raleway',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 0 16px rgba(201,168,76,.2);transition:background .2s,box-shadow .2s;-webkit-tap-highlight-color:transparent;white-space:nowrap}
+        .c-btn:active{background:rgba(201,168,76,.12);box-shadow:0 0 24px rgba(201,168,76,.45)}
+        .c-btn-arrow{font-size:11px;line-height:1}
+        .c-dots{display:flex;gap:6px;align-items:center}
+        .c-dot{height:6px;width:6px;border-radius:3px;background:rgba(201,168,76,.25);cursor:pointer;transition:background .25s,width .25s;-webkit-tap-highlight-color:transparent}
+        .c-dot.active{background:var(--gold);width:22px}
+        .c-counter{font-size:10px;color:var(--muted);letter-spacing:1px;text-align:center;margin-top:8px}
+
+        .c-card{border:1px solid rgba(201,168,76,.25);background:var(--dark2);overflow:hidden;position:relative}
+        .c-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);z-index:2}
+        .c-card.feat{border-color:rgba(201,168,76,.5)}
+
+        /* ── 改咗呢度：16/9 → 4/5 ── */
+        .c-thumb{position:relative;width:100%;aspect-ratio:4/5;background:#0a0808;overflow:hidden}
+        .c-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+
+        .c-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(201,168,76,.55);background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:14px;pointer-events:none;z-index:1}
+        .c-views{position:absolute;bottom:8px;left:8px;z-index:1;background:rgba(0,0,0,.82);backdrop-filter:blur(6px);border:1px solid rgba(201,168,76,.4);border-radius:3px;padding:5px 9px}
+        .cv-num{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:3px;line-height:1;background:linear-gradient(to bottom,#FFFFFF 0%,#F5C842 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .cv-lbl{font-size:7px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+        .c-best{position:absolute;top:8px;right:8px;z-index:1;background:var(--gold);color:var(--black);font-size:7px;font-weight:700;letter-spacing:1.5px;padding:3px 7px;text-transform:uppercase}
+        .c-body{padding:14px}
+        .c-type{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
+        .c-name{font-family:'Playfair Display',serif;font-size:19px;color:var(--cream);margin-bottom:2px}
+        .c-sub{font-size:10px;color:var(--muted);font-style:italic;margin-bottom:10px}
+        .c-divider{height:1px;background:linear-gradient(90deg,var(--gold-dim),transparent);margin-bottom:10px}
+        .c-m1{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:9px}
+        .cm1{text-align:center}
+        .cm1-n{font-family:'Playfair Display',serif;font-size:clamp(14px,4vw,18px);font-weight:700;color:var(--gold);line-height:1}
+        .cm1-l{font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-top:3px}
+        .c-m2{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,.12)}
+        .cm2{background:rgba(201,168,76,.03);padding:8px 5px;text-align:center}
+        .cm2-n{font-size:11px;font-weight:600;color:var(--gold-light);line-height:1}
+        .cm2-l{font-size:7px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-top:3px}
+        .c-nodata{padding:6px;text-align:center;font-size:8px;color:var(--muted);letter-spacing:1px;border-top:1px solid rgba(201,168,76,.08)}
+
+        .plt-bg{background:var(--dark1);border-top:1px solid var(--gold-dim);border-bottom:1px solid var(--gold-dim)}
+        .plt-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:18px}
+        .plt-hcard{background:var(--dark2);border:1px solid rgba(201,168,76,.3);padding:18px 13px;text-align:center;position:relative;overflow:hidden}
+        .plt-hcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+        .plt-hcard.feat{border-color:rgba(201,168,76,.6);background:linear-gradient(160deg,#1e1a10 0%,#111111 100%)}
+        .plt-icon{font-size:22px;margin-bottom:7px}
+        .plt-big-num{font-family:'Playfair Display',serif;font-size:clamp(22px,6vw,36px);font-weight:700;color:var(--gold);line-height:1;margin-bottom:5px}
+        .plt-big-lbl{font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+        .plt-note{font-size:10px;color:var(--cream);opacity:.7;line-height:1.6}
+        .plt-badge{display:inline-block;font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--black);background:var(--gold);padding:2px 7px;border-radius:20px;margin-bottom:7px}
+        .plt-level{font-family:'Playfair Display',serif;font-size:clamp(20px,5vw,32px);font-weight:700;color:var(--gold);line-height:1;margin-bottom:5px}
+
+        .acc-wrap{display:flex;flex-direction:column;gap:7px}
+        .acc-item{border:1px solid rgba(201,168,76,.2);overflow:hidden}
+        .acc-header{display:flex;align-items:center;justify-content:space-between;padding:13px 15px;cursor:pointer;background:var(--dark2);user-select:none;gap:9px;-webkit-tap-highlight-color:transparent}
+        .acc-header:active{background:rgba(201,168,76,.07)}
+        .acc-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+        .acc-emoji{font-size:16px;flex-shrink:0}
+        .acc-title{font-family:'Playfair Display',serif;font-size:15px;color:var(--cream)}
+        .acc-tag{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.4);padding:2px 6px;border-radius:20px;white-space:nowrap;flex-shrink:0}
+        .acc-arrow{color:var(--gold);font-size:10px;transition:transform .3s;flex-shrink:0}
+        .acc-arrow.open{transform:rotate(180deg)}
+        .acc-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+        .acc-body.open{max-height:900px}
+        .acc-inner{padding:0 15px 15px;background:var(--dark2)}
+        .plt-post-card{background:rgba(201,168,76,.03);border:1px solid rgba(201,168,76,.12);margin-bottom:8px;position:relative;overflow:hidden}
+        .plt-post-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold),transparent)}
+        .plt-post-title{font-size:11px;color:var(--cream);padding:9px 10px 8px 14px;line-height:1.5;border-bottom:1px solid rgba(201,168,76,.1)}
+        .plt-metrics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,.12)}
+        .plt-m{background:var(--dark2);padding:8px 5px;text-align:center}
+        .plt-m.hl{background:rgba(201,168,76,.07)}
+        .plt-m-n{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--gold);line-height:1}
+        .plt-m-n.cr{color:var(--cream)}
+        .plt-m-l{font-size:7px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:3px}
+        .plt-insight{background:rgba(201,168,76,.05);border-top:1px solid rgba(201,168,76,.15);padding:6px 9px;text-align:center;font-size:9px;color:var(--gold);line-height:1.5}
+        .plt-footnote{font-size:9px;color:var(--muted);line-height:1.7;padding:8px 0 0;border-top:1px solid rgba(201,168,76,.1);margin-top:3px}
+
+        .svc-grid{display:flex;flex-direction:column;gap:7px}
+        .svc-card{border:1px solid rgba(201,168,76,.18);padding:11px 13px;background:var(--dark2);position:relative}
+        .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+        .svc-card.hot{border-color:var(--gold);background:linear-gradient(160deg,#1e1a10,#121212);margin-top:10px}
+        .svc-card.hot::after{content:'POPULAR';position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--black);font-size:7px;font-weight:700;letter-spacing:2px;padding:3px 10px;border-radius:20px}
+        .svc-header{display:flex;align-items:center;gap:7px;margin-bottom:5px}
+        .svc-icon{font-size:18px;flex-shrink:0}
+        .svc-name{font-family:'Playfair Display',serif;font-size:16px;color:var(--cream)}
+        .svc-desc{font-size:10px;color:var(--muted);margin-bottom:6px;line-height:1.5}
+        .svc-plts{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:7px}
+        .svc-plt{font-size:8px;color:var(--gold);border:1px solid rgba(201,168,76,.35);padding:2px 7px;border-radius:20px}
+        .svc-price-row{display:flex;align-items:baseline;gap:6px;margin-bottom:6px}
+        .svc-from{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+        .svc-price{font-family:'Playfair Display',serif;font-size:24px;color:var(--gold);font-weight:700;line-height:1}
+        .svc-price sup{font-size:55%;vertical-align:super;color:var(--gold-light)}
+        .svc-unit{font-size:9px;color:var(--muted)}
+        .svc-note{font-size:9px;color:var(--gold);opacity:.7;border-top:1px solid rgba(201,168,76,.15);padding-top:6px}
+        .svc-footer{text-align:center;font-size:10px;color:var(--muted);margin-top:12px;letter-spacing:1px}
+
+        .boost-bg{background:var(--black);border-top:1px solid var(--gold-dim);border-bottom:1px solid var(--gold-dim)}
+        .boost-header-wrap{text-align:center;margin-bottom:0}
+        .boost-badge{display:inline-flex;align-items:center;gap:5px;background:var(--gold);color:var(--black);font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:3px 11px;border-radius:20px;margin-bottom:10px}
+        .boost-title{font-family:'Playfair Display',serif;font-size:clamp(18px,5vw,28px);color:var(--cream);margin-bottom:6px}
+        .boost-title span{color:var(--gold);font-style:italic}
+        .boost-subtitle{font-size:11px;color:var(--muted);line-height:1.7;max-width:460px;margin:0 auto}
+        .boost-trigger{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:14px;padding:10px 18px;border:1px solid rgba(201,168,76,.3);background:var(--dark2);cursor:pointer;font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;-webkit-tap-highlight-color:transparent}
+        .boost-trigger:active{background:rgba(201,168,76,.07)}
+        .boost-arr{font-size:10px;transition:transform .3s}
+        .boost-arr.open{transform:rotate(180deg)}
+        .boost-body{max-height:0;overflow:hidden;transition:max-height .5s ease}
+        .boost-body.open{max-height:1400px}
+        .boost-inner{padding-top:16px}
+        .boost-steps{display:flex;flex-direction:column;gap:8px;margin-bottom:13px}
+        .boost-step{display:flex;gap:11px;align-items:flex-start;background:var(--dark2);border:1px solid rgba(201,168,76,.15);padding:13px;position:relative}
+        .boost-step::before{content:'';position:absolute;top:0;left:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold),transparent)}
+        .bs-num{width:24px;height:24px;border-radius:50%;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:12px;font-weight:700;color:var(--gold);flex-shrink:0}
+        .bs-title{font-size:12px;font-weight:600;color:var(--cream);margin-bottom:2px}
+        .bs-desc{font-size:11px;color:var(--muted);line-height:1.6}
+        .bs-desc em{color:var(--gold);font-style:normal}
+        .boost-compare{border:1px solid rgba(201,168,76,.3);overflow:hidden}
+        .bc-head{display:grid;grid-template-columns:1fr 1fr}
+        .bc-h{padding:10px 9px;text-align:center;font-size:7px;letter-spacing:2px;text-transform:uppercase}
+        .bc-h.plain{background:rgba(255,255,255,.03);color:var(--muted);border-right:1px solid rgba(201,168,76,.15)}
+        .bc-h.boosted{background:var(--gold);color:var(--black);font-weight:700}
+        .bc-rows{display:flex;flex-direction:column;gap:1px;background:rgba(201,168,76,.15)}
+        .bc-row{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,.15)}
+        .bc-cell{padding:11px 9px;text-align:center;background:var(--dark2)}
+        .bc-cell.gb{background:rgba(201,168,76,.06)}
+        .bc-label{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+        .bc-value{font-family:'Playfair Display',serif;font-size:clamp(14px,3.5vw,18px);font-weight:700;color:var(--gold);line-height:1}
+        .bc-value.dim{color:rgba(201,168,76,.35)}
+        .bc-sub{font-size:8px;color:var(--muted);margin-top:3px}
+        .boost-fee{background:rgba(201,168,76,.05);border-top:1px solid rgba(201,168,76,.2);padding:10px 13px;text-align:center}
+        .bfn-row{display:flex;justify-content:center;align-items:center;gap:7px;flex-wrap:wrap}
+        .bfn-item{font-size:10px;color:var(--cream)}
+        .bfn-item span{color:var(--gold);font-weight:600}
+        .bfn-dot{color:var(--gold-dim)}
+
+        .contact-bg{background:radial-gradient(ellipse 70% 55% at 50% 50%,rgba(201,168,76,.06) 0%,transparent 70%),var(--black);border-top:1px solid var(--gold-dim);padding:44px 20px;text-align:center}
+        .contact-inner{display:flex;flex-direction:column;align-items:center;gap:11px;margin-top:24px}
+        .ig-icon{width:52px;height:52px;border-radius:50%;border:1px solid rgba(201,168,76,.35);display:flex;align-items:center;justify-content:center;font-size:22px}
+        .ig-lbl{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+        .ig-handle{font-size:16px;color:var(--gold);font-weight:600;letter-spacing:1px}
+        .dm-btn{margin-top:5px;display:inline-block;background:var(--gold);color:var(--black);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:10px 28px;border-radius:30px;text-decoration:none}
+
+        footer{background:var(--black);border-top:1px solid rgba(201,168,76,.1);padding:17px;text-align:center}
+        footer p{font-size:8px;color:var(--muted);letter-spacing:3px;text-transform:uppercase}
+        footer span{color:var(--gold)}
+
+        @media(min-width:640px){
+            .stats-grid{grid-template-columns:repeat(4,1fr)}
+            .aud-grid{flex-direction:row}
+            .aud-grid .aud-card{flex:1;min-width:0}
+            .svc-grid{flex-direction:row}
+            .svc-grid .svc-card{flex:1}
+            .plt-hero-grid{grid-template-columns:2fr 1fr}
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<section class="hero">
+    <div class="logo-wrap">
+        <img src="https://i.ibb.co/4n7psbNG/IMG-9079.jpg" alt="Jane.Jen.Jap Logo">
+    </div>
+    <p class="hero-eyebrow">Hong Kong Food Creator · Media Kit 2026</p>
+    <h1 class="hero-name">Jane<em>.</em>Jen<em>.</em>Jap</h1>
+    <p class="hero-handle">@jane.jen.jap &nbsp;·&nbsp; Instagram</p>
+    <div class="gold-bar"></div>
+    <p class="hero-tagline">Be <em>Real,</em> Be <em>Simple,</em> Be <em>Unforgettable.</em></p>
+    <p class="hero-sub">Authentic Food Content &nbsp;·&nbsp; 香港本地美食</p>
+    <div class="kit-badge">✦ Media Kit 2026 ✦</div>
+</section>
+
+<!-- ── STATS ── -->
+<div class="stats-bg">
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-num">1.6<sup>萬</sup></div>
+            <div class="stat-lbl">Instagram Followers</div>
+        </div>
+        <div class="stat-box">
+            <div class="s-tag go">✦ 有機內容</div>
+            <div class="stat-num">20<sup>+</sup></div>
+            <div class="stat-lbl">影片突破10萬 Views</div>
+            <div class="stat-note">有機自然增長</div>
+        </div>
+        <div class="stat-box">
+            <div class="s-tag gf">最佳成績</div>
+            <div class="stat-num">85<sup>萬</sup></div>
+            <div class="stat-lbl">最高單片 Views</div>
+            <div class="stat-note">合作影片紀錄</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-num">93.5<sup>%</sup></div>
+            <div class="stat-lbl">香港本地受眾</div>
+            <div class="stat-note">精準本地觸及</div>
+        </div>
+    </div>
+</div>
+
+<!-- ── AUDIENCE ── -->
+<div class="wrap">
+    <p class="eyebrow">Audience Insights</p>
+    <h2 class="s-title">你嘅廣告 <span>觸及邊啲人</span></h2>
+    <div class="aud-grid">
+        <div class="aud-card">
+            <div class="aud-ttl">性別分佈</div>
+            <div class="g-row">
+                <div class="g-item">
+                    <div class="g-ring f"><div class="g-inner"><span class="g-pct">58.7%</span></div></div>
+                    <div class="g-lbl">女性</div>
+                </div>
+                <div class="g-item">
+                    <div class="g-ring m"><div class="g-inner"><span class="g-pct">41.3%</span></div></div>
+                    <div class="g-lbl">男性</div>
+                </div>
+            </div>
+        </div>
+        <div class="aud-card">
+            <div class="aud-ttl">年齡分佈</div>
+            <div class="bar-row"><div class="bar-top"><span>25–34</span><b>39.3%</b></div><div class="bar-track"><div class="bar-fill" style="width:39.3%"></div></div></div>
+            <div class="bar-row"><div class="bar-top"><span>35–44</span><b>26.1%</b></div><div class="bar-track"><div class="bar-fill" style="width:26.1%"></div></div></div>
+            <div class="bar-row"><div class="bar-top"><span>18–24</span><b>11.7%</b></div><div class="bar-track"><div class="bar-fill" style="width:11.7%"></div></div></div>
+            <div class="bar-row"><div class="bar-top"><span>45–54</span><b>11.2%</b></div><div class="bar-track"><div class="bar-fill" style="width:11.2%"></div></div></div>
+            <div class="bar-row"><div class="bar-top"><span>55+</span><b>7.5%</b></div><div class="bar-track"><div class="bar-fill" style="width:7.5%"></div></div></div>
+            <p class="bar-note">▲ 25–44 歲佔 65.4% — 消費力最強受眾</p>
+        </div>
+        <div class="aud-card">
+            <div class="aud-ttl">地區分佈</div>
+            <div class="bar-row"><div class="bar-top"><span>🇭🇰 香港</span><b>93.5%</b></div><div class="bar-track"><div class="bar-fill" style="width:93.5%"></div></div></div>
+            <div class="bar-row"><div class="bar-top"><span>🇬🇧 英國</span><b>1.5%</b></div><div class="bar-track"><div class="bar-fill" style="width:1.5%"></div></div></div>
+            <div class="bar-row"><div class="bar-top"><span>🇨🇦 加拿大</span><b>1.0%</b></div><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div></div>
+            <div class="bar-row"><div class="bar-top"><span>🇹🇼 台灣</span><b>0.9%</b></div><div class="bar-track"><div class="bar-fill" style="width:0.9%"></div></div></div>
+            <div class="bar-row"><div class="bar-top"><span>🇲🇴 澳門</span><b>0.9%</b></div><div class="bar-track"><div class="bar-fill" style="width:0.9%"></div></div></div>
+        </div>
+    </div>
+</div>
+
+<!-- ── IG COLLABORATIONS ── -->
+<div class="collab-bg">
+    <div class="wrap">
+        <p class="eyebrow">Instagram · Past Collaborations</p>
+        <h2 class="s-title">Instagram <span>合作案例</span></h2>
+        <div class="carousel-wrap" id="collab-carousel">
+            <div class="carousel-track" id="collab-track">
+
+                <!-- Slide 1: Staro -->
+                <div class="carousel-slide">
+                    <div class="c-card feat">
+                        <div class="c-thumb">
+                            <img src="https://i.ibb.co/99HZ8psT/IMG-3707.jpg" alt="Staro 星空蛋糕">
+                            <div class="c-play">▶</div>
+                            <div class="c-views"><div class="cv-num">85萬</div><div class="cv-lbl">Views</div></div>
+                            <div class="c-best">⭐ BEST PERFORMER</div>
+                        </div>
+                        <div class="c-body">
+                            <div class="c-type">高級星空西餐廳</div>
+                            <div class="c-name">Staro</div>
+                            <div class="c-sub">"絕頂享受獨一無二的浪漫體驗？" · 2024年7月</div>
+                            <div class="c-divider"></div>
+                            <div class="c-m1">
+                                <div class="cm1"><div class="cm1-n">9,570</div><div class="cm1-l">❤ Likes</div></div>
+                                <div class="cm1"><div class="cm1-n">9,349</div><div class="cm1-l">✈ Shares</div></div>
+                                <div class="cm1"><div class="cm1-n">13,000</div><div class="cm1-l">🔖 Saves</div></div>
+                            </div>
+                            <div class="c-m2">
+                                <div class="cm2"><div class="cm2-n">32,244</div><div class="cm2-l">互動次數</div></div>
+                                <div class="cm2"><div class="cm2-n">296</div><div class="cm2-l">Comments</div></div>
+                                <div class="cm2"><div class="cm2-n">1,193</div><div class="cm2-l">檔案活動</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: The Palate -->
+                <div class="carousel-slide">
+                    <div class="c-card">
+                        <div class="c-thumb">
+                            <img src="https://i.ibb.co/DH2Q45bW/IMG-3708.jpg" alt="The Palate 自助餐">
+                            <div class="c-play">▶</div>
+                            <div class="c-views"><div class="cv-num">38萬</div><div class="cv-lbl">Views</div></div>
+                        </div>
+                        <div class="c-body">
+                            <div class="c-type">高質海鮮和牛自助餐</div>
+                            <div class="c-name">The Palate</div>
+                            <div class="c-divider"></div>
+                            <div class="c-m1">
+                                <div class="cm1"><div class="cm1-n">3,818</div><div class="cm1-l">❤ Likes</div></div>
+                                <div class="cm1"><div class="cm1-n">7,170</div><div class="cm1-l">✈ Shares</div></div>
+                                <div class="cm1"><div class="cm1-n">4,165</div><div class="cm1-l">🔖 Saves</div></div>
+                            </div>
+                            <div class="c-m2">
+                                <div class="cm2"><div class="cm2-n">245,545</div><div class="cm2-l">Reach</div></div>
+                                <div class="cm2"><div class="cm2-n">15,180</div><div class="cm2-l">互動</div></div>
+                                <div class="cm2"><div class="cm2-n">389</div><div class="cm2-l">檔案活動</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: 肉佐 -->
+                <div class="carousel-slide">
+                    <div class="c-card">
+                        <div class="c-thumb">
+                            <img src="https://i.ibb.co/9mP3Qc4M/IMG-3900.jpg" alt="肉佐 A5和牛壽喜燒放題">
+                            <div class="c-play">▶</div>
+                            <div class="c-views"><div class="cv-num">62萬</div><div class="cv-lbl">Views</div></div>
+                        </div>
+                        <div class="c-body">
+                            <div class="c-type">日式料理放題</div>
+                            <div class="c-name">肉佐</div>
+                            <div class="c-divider"></div>
+                            <div class="c-m1">
+                                <div class="cm1"><div class="cm1-n">—</div><div class="cm1-l">❤ Likes</div></div>
+                                <div class="cm1"><div class="cm1-n">5,145</div><div class="cm1-l">✈ Shares</div></div>
+                                <div class="cm1"><div class="cm1-n">7,510</div><div class="cm1-l">🔖 Saves</div></div>
+                            </div>
+                            <div class="c-nodata">✦ 詳細數據可按要求提供</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: 東京天井食堂 -->
+                <div class="carousel-slide">
+                    <div class="c-card">
+                        <div class="c-thumb">
+                            <img src="https://i.ibb.co/zT1nps0M/IMG-3709.jpg" alt="東京天井食堂 尖沙咀隱世小飯堂">
+                            <div class="c-play">▶</div>
+                            <div class="c-views"><div class="cv-num">24萬</div><div class="cv-lbl">Views</div></div>
+                        </div>
+                        <div class="c-body">
+                            <div class="c-type">日式料理小店 · 尖沙咀</div>
+                            <div class="c-name">東京天井食堂</div>
+                            <div class="c-divider"></div>
+                            <div class="c-m1">
+                                <div class="cm1"><div class="cm1-n">5,151</div><div class="cm1-l">❤ Likes</div></div>
+                                <div class="cm1"><div class="cm1-n">5,544</div><div class="cm1-l">✈ Shares</div></div>
+                                <div class="cm1"><div class="cm1-n">5,602</div><div class="cm1-l">🔖 Saves</div></div>
+                            </div>
+                            <div class="c-m2">
+                                <div class="cm2"><div class="cm2-n">110,945</div><div class="cm2-l">Reach</div></div>
+                                <div class="cm2"><div class="cm2-n">16,322</div><div class="cm2-l">互動</div></div>
+                                <div class="cm2"><div class="cm2-n">215</div><div class="cm2-l">檔案活動</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="carousel-nav">
+            <button class="c-btn" id="c-prev">
+                <span class="c-btn-arrow">◀</span>
+                <span>PREV</span>
+            </button>
+            <div class="c-dots">
+                <div class="c-dot active"></div>
+                <div class="c-dot"></div>
+                <div class="c-dot"></div>
+                <div class="c-dot"></div>
+            </div>
+            <button class="c-btn" id="c-next">
+                <span>NEXT</span>
+                <span class="c-btn-arrow">▶</span>
+            </button>
+        </div>
+        <p class="c-counter" id="c-counter">1 / 4</p>
+    </div>
+</div>
+
+<!-- ── MULTI-PLATFORM ── -->
+<div class="plt-bg">
+    <div class="wrap">
+        <p class="eyebrow">Multi-Platform Reach</p>
+        <h2 class="s-title">多平台 <span>影響力</span></h2>
+        <div class="plt-hero-grid">
+            <div class="plt-hcard feat">
+                <div class="plt-icon">🗺️</div>
+                <div class="plt-big-num">100萬<span style="font-size:.5em;color:var(--gold-light);vertical-align:super">+</span></div>
+                <div class="plt-big-lbl">Google Map 總瀏覽量</div>
+                <div class="plt-note">消費者主動搜尋<br>直接影響到訪決定</div>
+            </div>
+            <div class="plt-hcard">
+                <div class="plt-badge">OpenRice 香港</div>
+                <div class="plt-level">Level 4</div>
+                <div class="plt-big-lbl">OpenRice 食家評級</div>
+                <div class="plt-note">香港最大本地美食平台<br>公認飲食達人</div>
+            </div>
+        </div>
+        <div class="acc-wrap">
+            <div class="acc-item">
+                <div class="acc-header" onclick="toggleAcc(this)">
+                    <div class="acc-left">
+                        <span class="acc-emoji">📕</span>
+                        <span class="acc-title">小紅書 XHS</span>
+                        <span class="acc-tag">消費意圖高</span>
+                    </div>
+                    <span class="acc-arrow open">▼</span>
+                </div>
+                <div class="acc-body open">
+                    <div class="acc-inner">
+                        <div class="plt-post-card">
+                            <div class="plt-post-title">🥩 西式自助餐 @ Mr. Steak</div>
+                            <div class="plt-metrics-grid">
+                                <div class="plt-m"><div class="plt-m-n">3萬</div><div class="plt-m-l">👁 Views</div></div>
+                                <div class="plt-m"><div class="plt-m-n">531</div><div class="plt-m-l">❤ Likes</div></div>
+                                <div class="plt-m"><div class="plt-m-n">338</div><div class="plt-m-l">🔖 Saves</div></div>
+                            </div>
+                        </div>
+                        <div class="plt-post-card">
+                            <div class="plt-post-title">🍜 本地米線小店 @ 痴膠雞</div>
+                            <div class="plt-metrics-grid">
+                                <div class="plt-m"><div class="plt-m-n">1.5萬</div><div class="plt-m-l">👁 Views</div></div>
+                                <div class="plt-m"><div class="plt-m-n">387</div><div class="plt-m-l">❤ Likes</div></div>
+                                <div class="plt-m hl"><div class="plt-m-n cr">467</div><div class="plt-m-l">🔖 Saves</div></div>
+                            </div>
+                            <div class="plt-insight">✦ Saves (467) 超越 Likes (387) — 真實消費意圖極高</div>
+                        </div>
+                        <p class="plt-footnote">XHS Saves 超越 Likes 屬罕見，代表用戶想「留住備用」，對餐廳客戶比 Likes 更具說服力。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="acc-item">
+                <div class="acc-header" onclick="toggleAcc(this)">
+                    <div class="acc-left">
+                        <span class="acc-emoji">🧵</span>
+                        <span class="acc-title">Threads</span>
+                        <span class="acc-tag">有機擴散力強</span>
+                    </div>
+                    <span class="acc-arrow open">▼</span>
+                </div>
+                <div class="acc-body open">
+                    <div class="acc-inner">
+                        <div class="plt-post-card">
+                            <div class="plt-post-title">🍢 本地串燒店 @ 人生有限杯</div>
+                            <div class="plt-metrics-grid">
+                                <div class="plt-m"><div class="plt-m-n">4.7萬</div><div class="plt-m-l">👁 Views</div></div>
+                                <div class="plt-m"><div class="plt-m-n">607</div><div class="plt-m-l">❤ Likes</div></div>
+                                <div class="plt-m"><div class="plt-m-n">253</div><div class="plt-m-l">↗ Shares</div></div>
+                            </div>
+                        </div>
+                        <div class="plt-post-card">
+                            <div class="plt-post-title">🥟 本地腸炒燒賣 @ 登登登凳</div>
+                            <div class="plt-metrics-grid">
+                                <div class="plt-m"><div class="plt-m-n">1.9萬</div><div class="plt-m-l">👁 Views</div></div>
+                                <div class="plt-m"><div class="plt-m-n">123</div><div class="plt-m-l">❤ Likes</div></div>
+                                <div class="plt-m hl"><div class="plt-m-n cr">557</div><div class="plt-m-l">↗ Shares</div></div>
+                            </div>
+                            <div class="plt-insight">✦ Shares (557) 係 Likes (123) 的 4.5 倍 — 有機擴散率極高</div>
+                        </div>
+                        <p class="plt-footnote">唔 Like 都 Share — 代表內容有真實自發傳播力，令品牌觸及更廣更自然。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ── SERVICES ── -->
+<div class="wrap">
+    <p class="eyebrow">Services &amp; Rates</p>
+    <h2 class="s-title">合作 <span>方案</span></h2>
+    <div class="svc-grid">
+        <div class="svc-card">
+            <div class="svc-header">
+                <span class="svc-icon">📸</span>
+                <span class="svc-name">Photo Post</span>
+            </div>
+            <div class="svc-desc">精心拍攝靜態相片 · 配文撰寫 + Story 推廣</div>
+            <div class="svc-plts"><span class="svc-plt">📸 Instagram</span></div>
+            <div class="svc-price-row">
+                <span class="svc-from">From</span>
+                <span class="svc-price"><sup>HK$</sup>850</span>
+                <span class="svc-unit">/ 次</span>
+            </div>
+            <div class="svc-note">✦ 詳細方案按申請表另報</div>
+        </div>
+        <div class="svc-card">
+            <div class="svc-header">
+                <span class="svc-icon">🎬</span>
+                <span class="svc-name">Reels</span>
+            </div>
+            <div class="svc-desc">短片拍攝、剪接 · 字幕 + 配樂 + Story 推廣</div>
+            <div class="svc-plts"><span class="svc-plt">🎬 Instagram Reels</span></div>
+            <div class="svc-price-row">
+                <span class="svc-from">From</span>
+                <span class="svc-price"><sup>HK$</sup>1,000</span>
+                <span class="svc-unit">/ 條</span>
+            </div>
+            <div class="svc-note">✦ 詳細方案按申請表另報</div>
+        </div>
+        <div class="svc-card hot">
+            <div class="svc-header">
+                <span class="svc-icon">🚀</span>
+                <span class="svc-name">全平台套餐</span>
+            </div>
+            <div class="svc-desc">最大化曝光效果 · 四大平台同步發佈</div>
+            <div class="svc-plts">
+                <span class="svc-plt">🎬 Reels</span>
+                <span class="svc-plt">🧵 Threads</span>
+                <span class="svc-plt">🍴 OpenRice</span>
+                <span class="svc-plt">📘 Facebook</span>
+            </div>
+            <div class="svc-price-row">
+                <span class="svc-from">From</span>
+                <span class="svc-price"><sup>HK$</sup>1,500</span>
+                <span class="svc-unit">/ 套餐</span>
+            </div>
+            <div class="svc-note">✦ 詳細方案按申請表另報</div>
+        </div>
+    </div>
+    <p class="svc-footer">✦ 有興趣合作？填寫申請表後 Jane 將為你度身報價 ✦</p>
+</div>
+
+<!-- ── BOOST ADD-ON ── -->
+<div class="boost-bg">
+    <div class="wrap">
+        <div class="boost-header-wrap">
+            <div><span class="boost-badge">📢 Add-on Service</span></div>
+            <h2 class="boost-title">想要 <span>更多曝光？</span><br>Meta 廣告加購服務</h2>
+            <p class="boost-subtitle">由 Jane 全程代理落 Meta / Instagram 廣告，進一步放大合作帖子嘅觸及率。</p>
+            <div class="boost-trigger" id="boost-trigger" onclick="toggleBoost()">
+                <span id="boost-trigger-text">點擊展開詳情</span>
+                <span class="boost-arr" id="boost-arr">▼</span>
+            </div>
+        </div>
+        <div class="boost-body" id="boost-body">
+            <div class="boost-inner">
+                <div class="boost-steps">
+                    <div class="boost-step">
+                        <div class="bs-num">1</div>
+                        <div>
+                            <div class="bs-title">內容製作如常</div>
+                            <div class="bs-desc">先完成合作帖子，Jane 負責所有拍攝及剪接。</div>
+                        </div>
+                    </div>
+                    <div class="boost-step">
+                        <div class="bs-num">2</div>
+                        <div>
+                            <div class="bs-title">客戶選擇加購廣告</div>
+                            <div class="bs-desc">由客戶決定廣告預算，Jane 代為設定目標受眾及投放策略，<em>廣告費透明，按實際花費計算。</em></div>
+                        </div>
+                    </div>
+                    <div class="boost-step">
+                        <div class="bs-num">3</div>
+                        <div>
+                            <div class="bs-title">平台服務費另計</div>
+                            <div class="bs-desc">廣告代理服務收取<em>平台服務費</em>，詳情按查詢另報，全程提供廣告成效報告。</div>
+                        </div>
+                    </div>
+                    <div class="boost-step">
+                        <div class="bs-num">4</div>
+                        <div>
+                            <div class="bs-title">曝光率倍增</div>
+                            <div class="bs-desc">有機觸及 + 廣告放大，接觸更多<em>精準香港本地受眾</em>，最大化品牌效益。</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="boost-compare">
+                    <div class="bc-head">
+                        <div class="bc-h plain">有機觸及<br>Organic Only</div>
+                        <div class="bc-h boosted">🚀 加購廣告<br>Boosted</div>
+                    </div>
+                    <div class="bc-rows">
+                        <div class="bc-row">
+                            <div class="bc-cell"><div class="bc-label">觸及人數</div><div class="bc-value dim">有機範圍</div><div class="bc-sub">視乎演算法</div></div>
+                            <div class="bc-cell gb"><div class="bc-label">觸及人數</div><div class="bc-value">大幅提升</div><div class="bc-sub">精準投放目標受眾</div></div>
+                        </div>
+                        <div class="bc-row">
+                            <div class="bc-cell"><div class="bc-label">受眾控制</div><div class="bc-value dim">有限</div><div class="bc-sub">由平台決定</div></div>
+                            <div class="bc-cell gb"><div class="bc-label">受眾控制</div><div class="bc-value">✓ 精準</div><div class="bc-sub">地區 · 年齡 · 興趣</div></div>
+                        </div>
+                        <div class="bc-row">
+                            <div class="bc-cell"><div class="bc-label">成效報告</div><div class="bc-value dim">基本</div><div class="bc-sub">Instagram Insights</div></div>
+                            <div class="bc-cell gb"><div class="bc-label">成效報告</div><div class="bc-value">✓ 詳細</div><div class="bc-sub">Meta Ads 完整數據</div></div>
+                        </div>
+                    </div>
+                    <div class="boost-fee">
+                        <div class="bfn-row">
+                            <div class="bfn-item">廣告費 <span>按實報銷</span></div>
+                            <div class="bfn-dot">✦</div>
+                            <div class="bfn-item">平台服務費 <span>另報</span></div>
+                            <div class="bfn-dot">✦</div>
+                            <div class="bfn-item">全程 <span>Jane 代理</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ── CONTACT ── -->
+<div class="contact-bg">
+    <p class="eyebrow">Let's Work Together</p>
+    <h2 class="s-title" style="margin-bottom:0">立即 <span>聯絡</span></h2>
+    <div class="contact-inner">
+        <div class="ig-icon">📸</div>
+        <div class="ig-lbl">Instagram</div>
+        <div class="ig-handle">@jane.jen.jap</div>
+        <a class="dm-btn" href="https://www.instagram.com/jane.jen.jap" target="_blank" rel="noopener">DM 我 →</a>
+    </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+    <p>© 2026 <span>Jane.Jen.Jap</span> &nbsp;·&nbsp; All Rights Reserved</p>
+</footer>
+
+<script>
+    function toggleAcc(header) {
+        const body = header.nextElementSibling;
+        const arrow = header.querySelector('.acc-arrow');
+        body.classList.toggle('open');
+        arrow.classList.toggle('open');
+    }
+
+    function toggleBoost() {
+        const body = document.getElementById('boost-body');
+        const arr = document.getElementById('boost-arr');
+        const txt = document.getElementById('boost-trigger-text');
+        body.classList.toggle('open');
+        arr.classList.toggle('open');
+        txt.textContent = body.classList.contains('open') ? '收起詳情' : '點擊展開詳情';
+    }
+
+    const track = document.getElementById('collab-track');
+    const dots = document.querySelectorAll('.c-dot');
+    const counter = document.getElementById('c-counter');
+    const TOTAL = 4;
+    let cur = 0;
+    let touchStartX = 0;
+    let touchStartTime = 0;
+
+    function goTo(n) {
+        cur = ((n % TOTAL) + TOTAL) % TOTAL;
+        track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+        dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
+        counter.textContent = (cur + 1) + ' / ' + TOTAL;
+    }
+
+    document.getElementById('c-prev').addEventListener('click', function() { goTo(cur - 1); });
+    document.getElementById('c-next').addEventListener('click', function() { goTo(cur + 1); });
+    dots.forEach(function(d, i) { d.addEventListener('click', function() { goTo(i); }); });
+
+    var carousel = document.getElementById('collab-carousel');
+    carousel.addEventListener('touchstart', function(e) {
+        touchStartX = e.touches[0].clientX;
+        touchStartTime = Date.now();
+    }, { passive: true });
+    carousel.addEventListener('touchend', function(e) {
+        var diff = touchStartX - e.changedTouches[0].clientX;
+        var elapsed = Date.now() - touchStartTime;
+        if (Math.abs(diff) > 40 && elapsed < 400) {
+            goTo(cur + (diff > 0 ? 1 : -1));
+        }
+    });
+
+    goTo(0);
+</script>
+</body>
+</html>
