@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jane.Jen.Jap · Media Kit 2026 (PDF)</title>
+    <title>Jane.Jen.Jap · Media Kit 2026</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -13,9 +13,63 @@
             --cream:#F5F0E8;--muted:#888888;
             --gold-border:rgba(201,168,76,0.3);
         }
-        body{background:var(--black);color:var(--cream);font-family:'Raleway',sans-serif;line-height:1.6;max-width:820px;margin:0 auto}
-        @media print{body{max-width:100%}@page{margin:0;size:A4}}
+        body{background:var(--black);color:var(--cream);font-family:'Raleway',sans-serif;line-height:1.6;max-width:960px;margin:0 auto}
 
+        /* ============================================
+           PRINT / PDF SETTINGS
+        ============================================ */
+        @media print {
+            body { max-width: 100%; margin: 0; }
+
+            /* 橫向 A4 */
+            @page {
+                size: A4 landscape;
+                margin: 8mm 10mm;
+            }
+
+            /* ── 強制分頁位置 ── */
+            .page-break-before {
+                break-before: page;
+                page-break-before: always;
+            }
+
+            /* ── 防止元素被截斷 ── */
+            .pdf-header,
+            .stats-bar,
+            .aud-card,
+            .col-card,
+            .plt-card,
+            .svc-card,
+            .contact-section,
+            footer,
+            .sec-title,
+            .col-body,
+            .col-metrics {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            /* Grid 子項防截 */
+            .aud-grid > *,
+            .collab-grid > *,
+            .plt-grid > *,
+            .svc-grid > * {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            /* 第2頁：合作案例 grid 改 4欄橫排，更配合橫向 */
+            .collab-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            /* 隱藏 screen-only 元素（如有） */
+            .screen-only { display: none; }
+        }
+
+        /* ============================================
+           HEADER
+        ============================================ */
         .pdf-header{background:var(--black);border-top:3px solid var(--gold);border-bottom:2px solid var(--gold);padding:28px 28px 22px;text-align:center}
         .logo-row{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:14px}
         .logo-circle{width:68px;height:68px;border-radius:50%;border:2px solid var(--gold);overflow:hidden;flex-shrink:0}
@@ -29,6 +83,9 @@
         .tagline em{color:var(--gold);font-style:italic}
         .kit-badge{display:inline-block;margin-top:10px;border:1px solid var(--gold);border-radius:30px;padding:3px 14px;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
 
+        /* ============================================
+           STATS BAR
+        ============================================ */
         .stats-bar{display:grid;grid-template-columns:repeat(4,1fr);background:var(--dark1);border-bottom:1px solid var(--gold)}
         .stat-cell{padding:14px 8px;text-align:center;border-right:1px solid var(--gold-border)}
         .stat-cell:last-child{border-right:none}
@@ -40,6 +97,9 @@
         .stat-badge.gf{color:var(--black);background:var(--gold)}
         .stat-badge.go{color:var(--gold);border:1px solid var(--gold)}
 
+        /* ============================================
+           BODY / SECTIONS
+        ============================================ */
         .pdf-body{padding:0 20px;background:var(--black)}
         .section{padding:16px 0;border-bottom:1px solid var(--gold-border)}
         .section:last-child{border-bottom:none}
@@ -47,6 +107,9 @@
         .sec-title{font-family:'Playfair Display',serif;font-size:clamp(15px,3.5vw,20px);color:var(--cream);margin-bottom:12px}
         .sec-title span{color:var(--gold)}
 
+        /* ============================================
+           AUDIENCE
+        ============================================ */
         .aud-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
         .aud-card{background:var(--dark2);border:1px solid var(--gold-border);border-top:2px solid var(--gold);padding:11px 10px}
         .aud-ttl{font-size:7px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
@@ -61,6 +124,9 @@
         .bar-fill{height:100%;background:var(--gold)}
         .bar-note{font-size:8px;color:var(--gold);margin-top:5px}
 
+        /* ============================================
+           COLLAB
+        ============================================ */
         .collab-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
         .col-card{background:var(--dark2);border:1px solid var(--gold-border);border-top:2px solid var(--gold);overflow:hidden}
         .col-card.feat{border-color:var(--gold)}
@@ -80,6 +146,9 @@
         .col-m-l{font-size:6px;color:var(--muted);text-transform:uppercase;margin-top:2px}
         .col-nodata{font-size:8px;color:var(--muted);text-align:center;padding:5px;border-top:1px solid var(--gold-border)}
 
+        /* ============================================
+           PLATFORM
+        ============================================ */
         .plt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
         .plt-card{background:var(--dark2);border:1px solid var(--gold-border);border-top:2px solid var(--gold);padding:11px 8px;text-align:center}
         .plt-icon{font-size:18px;margin-bottom:4px}
@@ -88,6 +157,9 @@
         .plt-note{font-size:8px;color:var(--gold-light);margin-top:4px;line-height:1.4}
         .plt-badge{display:inline-block;font-size:6px;letter-spacing:1.5px;text-transform:uppercase;color:var(--black);background:var(--gold);padding:2px 6px;border-radius:20px;margin-bottom:4px}
 
+        /* ============================================
+           SERVICES
+        ============================================ */
         .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
         .svc-card{background:var(--dark2);border:1px solid var(--gold-border);border-top:2px solid var(--gold);padding:11px 10px}
         .svc-card.hot{border-color:var(--gold);background:linear-gradient(160deg,#1e1a10,#121212)}
@@ -103,6 +175,9 @@
         .svc-note{font-size:8px;color:var(--gold);opacity:.75;border-top:1px solid var(--gold-border);padding-top:5px;margin-top:6px}
         .svc-footer{text-align:center;font-size:9px;color:var(--muted);margin-top:10px;letter-spacing:1px}
 
+        /* ============================================
+           CONTACT + FOOTER
+        ============================================ */
         .contact-section{background:var(--dark1);border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
         .contact-eyebrow{font-size:7px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
         .contact-name{font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);margin-bottom:2px}
@@ -114,7 +189,10 @@
         footer p{font-size:7px;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
         footer span{color:var(--gold)}
 
-        @media(max-width:600px){
+        /* ============================================
+           RESPONSIVE (screen only)
+        ============================================ */
+        @media screen and (max-width:600px){
             .stats-bar{grid-template-columns:repeat(2,1fr)}
             .aud-grid,.collab-grid,.svc-grid{grid-template-columns:1fr}
             .plt-grid{grid-template-columns:repeat(2,1fr)}
@@ -124,6 +202,10 @@
     </style>
 </head>
 <body>
+
+<!-- ══════════════════════════════════════
+     PDF PAGE 1：Header + Stats + Audience
+══════════════════════════════════════ -->
 
 <div class="pdf-header">
     <div class="logo-row">
@@ -196,12 +278,15 @@
         </div>
     </div>
 
-    <div class="section">
+    <!-- ══════════════════════════════════════
+         PDF PAGE 2：合作案例（強制新頁）
+    ══════════════════════════════════════ -->
+
+    <div class="section page-break-before">
         <div class="sec-eyebrow">Instagram · Past Collaborations</div>
         <div class="sec-title">合作 <span>案例</span></div>
         <div class="collab-grid">
 
-            <!-- ✦ Staro -->
             <div class="col-card feat">
                 <div class="col-thumb">
                     <img src="https://i.ibb.co/V0w34zg4/IMG-3707.jpg" alt="Staro">
@@ -219,7 +304,6 @@
                 </div>
             </div>
 
-            <!-- ✦ 海鮮和牛放題 -->
             <div class="col-card">
                 <div class="col-thumb">
                     <img src="https://i.ibb.co/v4wq30f0/IMG-3708.jpg" alt="The Palate">
@@ -236,7 +320,6 @@
                 </div>
             </div>
 
-            <!-- ✦ 肉佐 -->
             <div class="col-card">
                 <div class="col-thumb">
                     <img src="https://i.ibb.co/VcG656Q9/IMG-3900.jpg" alt="肉佐">
@@ -254,7 +337,6 @@
                 </div>
             </div>
 
-            <!-- ✦ 東京天井食堂 -->
             <div class="col-card">
                 <div class="col-thumb">
                     <img src="https://i.ibb.co/HTkNyXVZ/IMG-3709.jpg" alt="東京天井食堂">
@@ -274,7 +356,11 @@
         </div>
     </div>
 
-    <div class="section">
+    <!-- ══════════════════════════════════════
+         PDF PAGE 3：多平台 + 方案 + Contact
+    ══════════════════════════════════════ -->
+
+    <div class="section page-break-before">
         <div class="sec-eyebrow">Multi-Platform Reach</div>
         <div class="sec-title">多平台 <span>影響力</span></div>
         <div class="plt-grid">
